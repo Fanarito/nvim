@@ -20,6 +20,12 @@ return {
 				require("neotest").run.run()
 			end,
 			desc = "Run nearest test"
+
+		},
+		{
+			"<leader>ts",
+			"<cmd>Neotest summary<cr>",
+			desc = "Test summary"
 		},
 		{
 			"<leader>td",
