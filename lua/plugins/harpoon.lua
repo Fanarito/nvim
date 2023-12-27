@@ -1,0 +1,47 @@
+return {
+	-- "ThePrimeagen/harpoon",
+	-- branch = "harpoon2",
+	-- lazy = false,
+	-- dependencies = { 'nvim-lua/plenary.nvim' },
+	-- init = function()
+	-- 	local wk = require("which-key")
+	-- 	local harpoon = require("harpoon")
+	--
+	-- 	harpoon:setup()
+	--
+	-- 	wk.register({
+	-- 		["<leader>m"] = {
+	-- 			a = {
+	-- 				function()
+	-- 					harpoon:list():append()
+	-- 				end,
+	-- 				"Add mark",
+	-- 			},
+	-- 			m = {
+	-- 				function()
+	-- 					harpoon.ui:toggle_quick_menu(harpoon:list())
+	-- 				end,
+	-- 				"List marks",
+	-- 			}
+	-- 		},
+	-- 	})
+	-- end,
+	-- -- keys = {
+	-- -- 	{
+	-- -- 		"<leader>ma",
+	-- -- 		function ()
+	-- -- 			local harpoon = require("harpoon")
+	-- -- 			harpoon:list():append()
+	-- -- 		end,
+	-- -- 		desc = "Add mark"
+	-- -- 	},
+	-- -- 	{
+	-- -- 		"<leader>mm",
+	-- -- 		function ()
+	-- -- 			local harpoon = require("harpoon")
+	-- -- 			harpoon.ui:toggle_quick_menu(harpoon:list())
+	-- -- 		end,
+	-- -- 		desc = "Mark UI"
+	-- -- 	},
+	-- -- }
+}
