@@ -19,6 +19,10 @@ wk.register({
 			q = { "<cmd>qa<cr>", "Close all" },
 		},
 
+		f = {
+			s = { "<cmd>w<cr>", "Save current buffer" },
+		},
+
 		["<tab>"] = { "<cmd>bprev<cr>", "Previous buffer" },
 		["<s-tab>"] = { "<cmd>bnext<cr>", "Next buffer" },
 	},
