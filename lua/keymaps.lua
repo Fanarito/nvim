@@ -4,6 +4,8 @@ wk.register({
 	["<leader>"] = {
 		-- Window management
 		w = {
+			"Window",
+
 			-- -- Navigation
 			-- l = { "<cmd>wincmd l<cr>", "Go to window to the left" },
 			-- h = { "<cmd>wincmd h<cr>", "Go to window to the right" },
@@ -19,6 +21,10 @@ wk.register({
 			q = { "<cmd>qa<cr>", "Close all" },
 		},
 
+		q = {
+			q = { "<cmd>qa<cr>", "Quit" },
+		},
+
 		f = {
 			s = { "<cmd>w<cr>", "Save current buffer" },
 		},
@@ -31,4 +37,3 @@ wk.register({
 vim.keymap.set("n", "<leader>y", "\"+y")
 vim.keymap.set("v", "<leader>y", "\"+y")
 vim.keymap.set("n", "<leader>y", "\"+Y")
-
