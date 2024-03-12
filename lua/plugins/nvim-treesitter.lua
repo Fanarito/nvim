@@ -20,6 +20,7 @@ return {
 				"tsx",
 				"graphql",
 				"bash",
+				"vim",
 			},
 			highlight = { enable = true },
 			indent = { enable = true },

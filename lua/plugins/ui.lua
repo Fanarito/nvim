@@ -1,36 +1,42 @@
 return {
 	{
-		'ribru17/bamboo.nvim',
+		"ribru17/bamboo.nvim",
 		lazy = false,
 		priority = 1000,
 		config = function()
-			require('bamboo').setup {
+			require("bamboo").setup({
 				-- optional configuration here
-			}
-			require('bamboo').load()
+			})
+			require("bamboo").load()
 		end,
 	},
 	{
-		'nvimdev/dashboard-nvim',
-		event = 'VimEnter',
+		"nvimdev/dashboard-nvim",
+		event = "VimEnter",
 		config = function()
-			require('dashboard').setup {
+			require("dashboard").setup({
 				-- config
-			}
+			})
 		end,
 		dependencies = {
-			{ 'nvim-tree/nvim-web-devicons' },
-		}
-	},
-	{
-		'nvim-lualine/lualine.nvim',
-		config = true,
-		dependencies = {
-			{ 'nvim-tree/nvim-web-devicons' },
+			{ "nvim-tree/nvim-web-devicons" },
 		},
 	},
 	{
-		'stevearc/dressing.nvim',
+		"nvim-lualine/lualine.nvim",
+		opts = {
+			sections = {
+				lualine_c = {
+					{ "filename", path = 1 },
+				},
+			},
+		},
+		dependencies = {
+			{ "nvim-tree/nvim-web-devicons" },
+		},
+	},
+	{
+		"stevearc/dressing.nvim",
 		opts = {},
 	},
 	{
@@ -64,12 +70,12 @@ return {
 		},
 	},
 	{
-		'nvim-focus/focus.nvim',
-		version = '*',
+		"nvim-focus/focus.nvim",
+		version = "*",
 		opts = {
 			autoresize = {
 				enable = false,
-			}
+			},
 		},
 		keys = {
 			{
