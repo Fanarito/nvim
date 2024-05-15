@@ -12,6 +12,7 @@ return {
 			end,
 		},
 		{ "onsails/lspkind.nvim" },
+		{ "kristijanhusak/vim-dadbod-completion" },
 	},
 	config = function()
 		local lsp_zero = require("lsp-zero")
@@ -74,11 +75,19 @@ return {
 			}),
 			sources = {
 				-- Copilot Source
-				{ name = "copilot", group_index = 2 },
+				{ name = "copilot",  group_index = 2 },
 				-- Other Sources
 				{ name = "nvim_lsp", group_index = 2 },
-				{ name = "luasnip", group_index = 2 },
-				{ name = "path", group_index = 2 },
+				{ name = "luasnip",  group_index = 2 },
+				{ name = "path",     group_index = 2 },
+			},
+		})
+
+		-- Setup vim-dadbod completion
+		cmp.setup.filetype({ "sql" }, {
+			sources = {
+				{ name = "vim-dadbod-completion" },
+				{ name = "buffer" },
 			},
 		})
 	end,
