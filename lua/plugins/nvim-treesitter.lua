@@ -2,6 +2,9 @@
 return {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
+	dependencies = {
+		"nvim-treesitter/nvim-treesitter-textobjects",
+	},
 	config = function()
 		local configs = require("nvim-treesitter.configs")
 
@@ -29,9 +32,9 @@ return {
 				enable = true,
 				keymaps = {
 					init_selection = '<CR>',
-					scope_incremental = '<CR>',
-					node_incremental = '<TAB>',
-					node_decremental = '<S-TAB>',
+					scope_incremental = false,
+					node_incremental = '<CR>',
+					node_decremental = '<BS>',
 				},
 			},
 
@@ -39,5 +42,5 @@ return {
 			-- Recommendation: set to false if you don't have `tree-sitter` CLI installed locally
 			auto_install = true,
 		})
-	end
+	end,
 }

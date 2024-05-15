@@ -13,10 +13,13 @@ opt.scrolloff = 8         -- Keep at least 8 lines loaded from top of screen
 opt.completeopt = "menu,menuone,noselect"
 
 opt.swapfile = false -- Disable swap file
-opt.hlsearch = false -- Disable search highlighting
 opt.incsearch = true -- Enable incremental search
 
-opt.wrap = false     -- Disable softwrap
+-- Highlight the search but map <Esc> to clear the highlighting
+opt.hlsearch = true -- Disable search highlighting
+vim.keymap.set('n', '<Esc>', '<Cmd>nohlsearch<CR>')
+
+opt.wrap = false -- Disable softwrap
 
 if vim.fn.has("nvim-0.10") == 1 then
   opt.smoothscroll = true
