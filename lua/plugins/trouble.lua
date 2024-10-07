@@ -19,4 +19,5 @@ return {
 
 		{ "gR",         function() require("trouble").toggle("lsp_references") end,                      desc = "LSP References??" },
 	},
+	cond = not vim.g.vscode,
 }

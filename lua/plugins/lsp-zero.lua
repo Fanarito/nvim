@@ -12,4 +12,5 @@ return {
 		-- https://github.com/VonHeikemen/lsp-zero.nvim/issues/320
 		vim.g.lsp_zero_ui_float_border = 0
 	end,
+	cond = not vim.g.vscode,
 }

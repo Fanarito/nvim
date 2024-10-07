@@ -59,4 +59,5 @@ return {
 			desc = "Format",
 		},
 	},
+	cond = not vim.g.vscode,
 }

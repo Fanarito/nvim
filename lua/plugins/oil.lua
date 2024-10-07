@@ -6,4 +6,5 @@ return {
 	keys = {
 		{ "-", "<cmd>Oil<cr>", desc = "Open parent directory in oil" },
 	},
+	cond = not vim.g.vscode,
 }

@@ -1,5 +1,7 @@
 -- Debugging
 return {
+	cond = not vim.g.vscode,
+
 	"mfussenegger/nvim-dap",
 
 	dependencies = {

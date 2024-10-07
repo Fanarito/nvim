@@ -16,4 +16,5 @@ return {
 		},
 		panel = { enabled = false },
 	},
+	cond = not vim.g.vscode,
 }

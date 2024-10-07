@@ -49,4 +49,5 @@ return {
 			desc = "Run all tests in workspace"
 		},
 	},
+	cond = not vim.g.vscode,
 }

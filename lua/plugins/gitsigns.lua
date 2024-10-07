@@ -20,4 +20,5 @@ return {
 		{ "<leader>gn", "<cmd>Gitsigns next_hunk<cr>",        desc = "Go to next hunk/change in buffer" },
 		{ "<leader>gp", "<cmd>Gitsigns prev_hunk<cr>",        desc = "Go to prev hunk/change in buffer" },
 	},
+	cond = not vim.g.vscode,
 }

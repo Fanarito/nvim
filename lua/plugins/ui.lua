@@ -21,6 +21,7 @@ return {
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},
+		cond = not vim.g.vscode,
 	},
 	{
 		"nvim-lualine/lualine.nvim",
@@ -34,10 +35,12 @@ return {
 		dependencies = {
 			{ "nvim-tree/nvim-web-devicons" },
 		},
+		cond = not vim.g.vscode,
 	},
 	{
 		"stevearc/dressing.nvim",
 		opts = {},
+		cond = not vim.g.vscode,
 	},
 	{
 		"folke/noice.nvim",
@@ -68,6 +71,7 @@ return {
 			--   If not available, we use `mini` as the fallback
 			-- "rcarriga/nvim-notify",
 		},
+		cond = not vim.g.vscode,
 	},
 	{
 		"nvim-focus/focus.nvim",
@@ -119,5 +123,6 @@ return {
 				"Toggle focus",
 			},
 		},
+		cond = not vim.g.vscode,
 	},
 }

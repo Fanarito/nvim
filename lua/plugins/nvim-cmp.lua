@@ -1,5 +1,7 @@
 -- nvim-cmp is used for autocompletion
 return {
+	cond = not vim.g.vscode,
+
 	"hrsh7th/nvim-cmp",
 	event = "InsertEnter",
 	dependencies = {

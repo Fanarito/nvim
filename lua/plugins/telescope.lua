@@ -72,4 +72,5 @@ return {
 		{ "gdi", "<cmd>Telescope lsp_implementations<cr>", desc = "Go to implementation" },
 		{ "gdr", "<cmd>Telescope lsp_references<cr>", desc = "Go to reference" },
 	},
+	cond = not vim.g.vscode,
 }

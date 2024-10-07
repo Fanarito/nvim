@@ -1,4 +1,6 @@
 return {
+	cond = not vim.g.vscode,
+
 	'akinsho/toggleterm.nvim',
 	version = "v2.*",
 	opts = {
