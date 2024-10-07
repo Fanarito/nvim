@@ -26,15 +26,15 @@ return {
 				"vim",
 			},
 			highlight = { enable = true },
-			indent = { enable = true },
+			indent = { enable = false },
 
 			incremental_selection = {
 				enable = true,
 				keymaps = {
-					init_selection = '<CR>',
+					init_selection = "<CR>",
 					scope_incremental = false,
-					node_incremental = '<CR>',
-					node_decremental = '<BS>',
+					node_incremental = "<CR>",
+					node_decremental = "<BS>",
 				},
 			},
 
