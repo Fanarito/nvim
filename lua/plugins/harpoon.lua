@@ -10,15 +10,15 @@ return {
 	keys = {
 		{
 			"<leader>ma",
-			function ()
+			function()
 				local harpoon = require("harpoon")
-				harpoon:list():append()
+				harpoon:list():add()
 			end,
 			desc = "Add mark"
 		},
 		{
 			"<leader>mm",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon.ui:toggle_quick_menu(harpoon:list())
 			end,
@@ -26,7 +26,7 @@ return {
 		},
 		{
 			"<leader>m<tab>",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():next()
 			end,
@@ -34,7 +34,7 @@ return {
 		},
 		{
 			"<leader>m<s-tab>",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():prev()
 			end,
@@ -42,7 +42,7 @@ return {
 		},
 		{
 			"<leader>m1",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():select(1)
 			end,
@@ -50,7 +50,7 @@ return {
 		},
 		{
 			"<leader>m2",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():select(2)
 			end,
@@ -58,7 +58,7 @@ return {
 		},
 		{
 			"<leader>m3",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():select(3)
 			end,
@@ -66,7 +66,7 @@ return {
 		},
 		{
 			"<leader>m4",
-			function ()
+			function()
 				local harpoon = require("harpoon")
 				harpoon:list():select(4)
 			end,
