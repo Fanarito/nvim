@@ -13,13 +13,15 @@ return {
 	},
 	config = function()
 		local teleTrouble = require("trouble.sources.telescope")
+		local telescope = require("telescope")
 
-		require("telescope").setup({
+		telescope.setup({
 			extensions = {
 				fzf = {
-					fuzzy = true, -- false will only do exact matching
+					fuzzy = true,    -- false will only do exact matching
 					override_generic_sorter = true, -- override the generic sorter
 					override_file_sorter = true, -- override the file sorter
+					case_mode = "smart_case",
 				},
 			},
 			pickers = {
@@ -48,9 +50,9 @@ return {
 		})
 	end,
 	keys = {
-		{ "<leader><space>", "<cmd>Telescope find_files<cr>", desc = "Find files" },
-		{ "<leader>/", "<cmd>Telescope live_grep<cr>", desc = "Search in workspace" },
-		{ "<leader>,", "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
+		{ "<leader><space>", "<cmd>Telescope find_files<cr>",                    desc = "Find files" },
+		{ "<leader>/",       "<cmd>Telescope live_grep<cr>",                     desc = "Search in workspace" },
+		{ "<leader>,",       "<cmd>Telescope buffers show_all_buffers=true<cr>", desc = "Switch Buffer" },
 		{
 			"<leader>.",
 			function()
@@ -58,19 +60,19 @@ return {
 			end,
 			desc = "Find files in cwd",
 		},
-		{ "<leader>ss", "<cmd>Telescope lsp_document_symbols<cr>", desc = "Search symbols in file" },
+		{ "<leader>ss", "<cmd>Telescope lsp_document_symbols<cr>",          desc = "Search symbols in file" },
 		{ "<leader>sS", "<cmd>Telescope lsp_dynamic_workspace_symbols<cr>", desc = "Search symbols in workspace" },
-		{ "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>", desc = "Search in buffer" },
-		{ "<leader>fb", "<cmd>Telescope buffers<cr>", desc = "Find buffer" },
+		{ "<leader>sb", "<cmd>Telescope current_buffer_fuzzy_find<cr>",     desc = "Search in buffer" },
+		{ "<leader>fb", "<cmd>Telescope buffers<cr>",                       desc = "Find buffer" },
 
 		-- Telescope git stuff
-		{ "<leader>gg", "<cmd>Telescope git_status<cr>", desc = "Git status" },
+		{ "<leader>gg", "<cmd>Telescope git_status<cr>",                    desc = "Git status" },
 
 		-- Gotos
-		{ "gdt", "<cmd>Telescope lsp_type_definitions<cr>", desc = "Go to type" },
-		{ "gdd", "<cmd>Telescope lsp_definitions<cr>", desc = "Go to definition" },
-		{ "gdi", "<cmd>Telescope lsp_implementations<cr>", desc = "Go to implementation" },
-		{ "gdr", "<cmd>Telescope lsp_references<cr>", desc = "Go to reference" },
+		{ "gdt",        "<cmd>Telescope lsp_type_definitions<cr>",          desc = "Go to type" },
+		{ "gdd",        "<cmd>Telescope lsp_definitions<cr>",               desc = "Go to definition" },
+		{ "gdi",        "<cmd>Telescope lsp_implementations<cr>",           desc = "Go to implementation" },
+		{ "gdr",        "<cmd>Telescope lsp_references<cr>",                desc = "Go to reference" },
 	},
 	cond = not vim.g.vscode,
 }
