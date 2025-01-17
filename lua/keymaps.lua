@@ -1,37 +1,54 @@
 local wk = require("which-key")
 
-wk.register({
-	["<leader>"] = {
-		-- Window management
-		w = {
-			"Window",
+-- wk.register({
+-- 	["<leader>"] = {
+-- 		-- Window management
+-- 		w = {
+-- 			"Window",
+--
+-- 			-- -- Navigation
+-- 			-- l = { "<cmd>wincmd l<cr>", "Go to window to the left" },
+-- 			-- h = { "<cmd>wincmd h<cr>", "Go to window to the right" },
+-- 			-- j = { "<cmd>wincmd j<cr>", "Go to window below" },
+-- 			-- k = { "<cmd>wincmd k<cr>", "Go to window above" },
+--
+-- 			-- Moving
+--
+-- 			-- Layout
+-- 			s = { "<cmd>split<cr>", "Split windows horiztonally" },
+-- 			v = { "<cmd>vsplit<cr>", "Split windows verticall" },
+-- 			c = { "<cmd>wincmd c<cr>", "Close window" },
+-- 			q = { "<cmd>qa<cr>", "Close all" },
+-- 		},
+--
+-- 		q = {
+-- 			q = { "<cmd>qa<cr>", "Quit" },
+-- 		},
+--
+-- 		f = {
+-- 			s = { "<cmd>w<cr>", "Save current buffer" },
+-- 		},
+--
+-- 		["<tab>"] = { "<cmd>bprev<cr>", "Previous buffer" },
+-- 		["<s-tab>"] = { "<cmd>bnext<cr>", "Next buffer" },
+-- 	},
+-- })
 
-			-- -- Navigation
-			-- l = { "<cmd>wincmd l<cr>", "Go to window to the left" },
-			-- h = { "<cmd>wincmd h<cr>", "Go to window to the right" },
-			-- j = { "<cmd>wincmd j<cr>", "Go to window below" },
-			-- k = { "<cmd>wincmd k<cr>", "Go to window above" },
+wk.add({
+	{ "<leader><s-tab>", "<cmd>bnext<cr>",    desc = "Next buffer" },
+	{ "<leader><tab>",   "<cmd>bprev<cr>",    desc = "Previous buffer" },
 
-			-- Moving
+	{ "<leader>f",       group = "Window" },
+	{ "<leader>fs",      "<cmd>w<cr>",        desc = "Save current buffer" },
 
-			-- Layout
-			s = { "<cmd>split<cr>", "Split windows horiztonally" },
-			v = { "<cmd>vsplit<cr>", "Split windows verticall" },
-			c = { "<cmd>wincmd c<cr>", "Close window" },
-			q = { "<cmd>qa<cr>", "Close all" },
-		},
+	{ "<leader>q",       group = "Quit" },
+	{ "<leader>qq",      "<cmd>qa<cr>",       desc = "Quit" },
 
-		q = {
-			q = { "<cmd>qa<cr>", "Quit" },
-		},
-
-		f = {
-			s = { "<cmd>w<cr>", "Save current buffer" },
-		},
-
-		["<tab>"] = { "<cmd>bprev<cr>", "Previous buffer" },
-		["<s-tab>"] = { "<cmd>bnext<cr>", "Next buffer" },
-	},
+	{ "<leader>w",       group = "Window" },
+	{ "<leader>wc",      "<cmd>wincmd c<cr>", desc = "Close window" },
+	{ "<leader>wq",      "<cmd>qa<cr>",       desc = "Close all" },
+	{ "<leader>ws",      "<cmd>split<cr>",    desc = "Split windows horiztonally" },
+	{ "<leader>wv",      "<cmd>vsplit<cr>",   desc = "Split windows verticall" },
 })
 
 -- Setup diagnostic keymaps

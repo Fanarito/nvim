@@ -6,7 +6,7 @@ return {
 		formatters_by_ft = {
 			lua = { "stylua" },
 			python = { "isort", "black" },
-			javascript = { lsp_format = "fallback" },
+			javascript = { "prettierd", lsp_format = "fallback" },
 			go = { "goimports", "gofmt" },
 		},
 
