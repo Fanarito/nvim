@@ -12,6 +12,8 @@ opt.tabstop = 4           -- Number of spaces tabs count for
 opt.scrolloff = 8         -- Keep at least 8 lines loaded from top of screen
 opt.completeopt = "menu,menuone,noselect"
 
+opt.splitright = true
+
 opt.swapfile = false -- Disable swap file
 opt.incsearch = true -- Enable incremental search
 
@@ -42,3 +44,12 @@ vim.cmd('autocmd! TermOpen term://* lua set_terminal_keymaps()')
 
 -- Only show top 15 items in completion menu
 opt.pumheight = 15
+
+-- Disable error virtual text
+vim.diagnostic.config({
+  virtual_text = false,
+})
+
+vim.keymap.set('n', '<leader>k', function()
+  vim.diagnostic.open_float(nil, { focus = false, max_width = 80 })
+end)

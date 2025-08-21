@@ -1,7 +1,7 @@
 -- Replacement for nvim-cmp
 return {
 	'saghen/blink.cmp',
-	version = "v0.*",
+	version = "1.*",
 	lazy = false, -- lazy loading handled internally
 
 	dependencies = {
@@ -40,10 +40,11 @@ return {
 		},
 
 		appearance = {
-			-- Sets the fallback highlight groups to nvim-cmp's highlight groups
-			-- Useful for when your theme doesn't support blink.cmp
-			-- will be removed in a future release
-			use_nvim_cmp_as_default = true,
+			-- -- Sets the fallback highlight groups to nvim-cmp's highlight groups
+			-- -- Useful for when your theme doesn't support blink.cmp
+			-- -- will be removed in a future release
+			-- use_nvim_cmp_as_default = true,
+
 			-- Set to 'mono' for 'Nerd Font Mono' or 'normal' for 'Nerd Font'
 			-- Adjusts spacing to ensure icons are aligned
 			nerd_font_variant = 'mono',
@@ -88,26 +89,26 @@ return {
 		-- default list of enabled providers defined so that you can extend it
 		-- elsewhere in your config, without redefining it, via `opts_extend`
 		sources = {
-			default = { 'lsp', 'path', 'snippets', 'buffer', 'copilot' },
+			default = { 'lsp', 'path', 'snippets', 'buffer', --[[ 'copilot' ]] },
 
 			providers = {
-				copilot = {
-					name = "copilot",
-					module = "blink-cmp-copilot",
-					score_offset = 100,
-					async = true,
-
-					-- Set the copilot icon
-					transform_items = function(_, items)
-						local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
-						local kind_idx = #CompletionItemKind + 1
-						CompletionItemKind[kind_idx] = "Copilot"
-						for _, item in ipairs(items) do
-							item.kind = kind_idx
-						end
-						return items
-					end,
-				}
+				-- copilot = {
+				-- 	name = "copilot",
+				-- 	module = "blink-cmp-copilot",
+				-- 	score_offset = 100,
+				-- 	async = true,
+				--
+				-- 	-- Set the copilot icon
+				-- 	transform_items = function(_, items)
+				-- 		local CompletionItemKind = require("blink.cmp.types").CompletionItemKind
+				-- 		local kind_idx = #CompletionItemKind + 1
+				-- 		CompletionItemKind[kind_idx] = "Copilot"
+				-- 		for _, item in ipairs(items) do
+				-- 			item.kind = kind_idx
+				-- 		end
+				-- 		return items
+				-- 	end,
+				-- }
 			},
 
 			-- optionally disable cmdline completions

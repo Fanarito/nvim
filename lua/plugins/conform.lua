@@ -5,9 +5,9 @@ return {
 	opts = {
 		formatters_by_ft = {
 			lua = { "stylua" },
-			python = { "isort", "black" },
-			javascript = { "prettierd", lsp_format = "fallback" },
-			go = { "goimports", "gofmt" },
+			python = { "ruff_format" },
+			javascript = { "prettier", lsp_format = "fallback" },
+			go = { "gofmt", "goimports" },
 		},
 
 		format_on_save = function(bufnr)
